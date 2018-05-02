@@ -1,0 +1,30 @@
+<div class="container">
+  <h1 class="title">Product List</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Category_Id</th>
+        <th>Category_Name</th>
+        <th>Action</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- {{ products}} -->
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.category_id }}</td>
+        <td>{{ product.category_name }}</td>
+        <td><a [routerLink]="['/update', product.id]">Edit</a></td>
+        <td><a href="">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
