@@ -23,7 +23,7 @@
         <td>{{ product.category_id }}</td>
         <td>{{ product.category_name }}</td>
         <td><a [routerLink]="['/update', product.id]">Edit</a></td>
-        <td><a href="">Delete</a></td>
+        <td><a (click)="deleteProduct(product.id)">Delete</a></td>
       </tr>
     </tbody>
   </table>
